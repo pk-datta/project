@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE COMPUTER CLASS</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Floating Background -->
+    <div class="floating-shape shape1"></div>
+    <div class="floating-shape shape2"></div>
+
+    <!-- Navbar -->
+    <nav class="glass-card">
+        <div class="logo">
+           <img src="{{ url_for('static', filename='logo.png') }}" alt="PE COMPUTER CLASS Logo">
+            <span class="gradient-text">PE COMPUTER CLASS</span>
+        </div>
+
+        <ul id="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+        <div class="menu-btn" id="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Build Your Career With <span class="gradient-text">Professional Computer Courses</span></h1>
+            <p>Learn practical computer skills with expert guidance and career-focused professional courses designed to build real-world knowledge.</p>
+
+            <a href="#courses" class="btn">View Courses</a>
+            <a href="https://www.youtube.com/watch?v=x8q0SBLcvRc" class="btn secondary-btn">Free Demo</a>
+        </div>
+
+        <!-- Form -->
+<div class="hero-form glass-card">
+    <h3 class="gradient-text">Quick Admission</h3>
+
+    <form action="http://127.0.0.1:5000/register" method="POST">
+        <input type="text" name="name" placeholder="Student Name" required>
+
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+
+        <input type="email" name="email" placeholder="Email Address" required>
+
+        <select name="course" required>
+            <option value="">Select Course</option>
+            <option>DCA</option>
+            <option>ADCA</option>
+            <option>PGDCA</option>
+            <option>DTP</option>
+            <option>Typing</option>
+            <option>Basic Computer</option>
+        </select>
+
+        <textarea name="message" rows="4" placeholder="Reference"></textarea>
+
+        <button type="submit">Submit</button>
+
+    </form>
+</div>
+    </section>
+
+    <!-- Courses -->
+    <section class="courses" id="courses">
+        <h2 class="section-title gradient-text">Our Courses</h2>
+        <p>Choose from our professional training programs.</p>
+
+        <div class="course-container">
+
+            <div class="course-card glass-card">
+                <h3>DCA</h3>
+                <p>Diploma in Computer Applications</p>
+                <p>6 Months | ₹8,500</p>
+                <a href="#" class="btn">Enroll Now</a>
+            </div>
+
+            <div class="course-card glass-card">
+                <h3>ADCA</h3>
+                <p>Advanced Diploma in Computer Applications</p>
+                <p>12 Months | ₹14,500</p>
+                <a href="#" class="btn">Enroll Now</a>
+            </div>
+
+            <div class="course-card glass-card">
+                <h3>PGDCA</h3>
+                <p>Post Graduate Diploma</p>
+                <p>12 Months | ₹18,000</p>
+                <a href="#" class="btn">Enroll Now</a>
+            </div>
+
+            <div class="course-card glass-card">
+                <h3>DTP</h3>
+                <p>Desktop Publishing</p>
+                <p>3 Months | ₹6,500</p>
+                <a href="#" class="btn">Enroll Now</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+        <h2 class="section-title">Why Choose Us</h2>
+
+        <div class="feature-container">
+
+            <div class="feature-box glass-card">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h3>Experienced Teachers</h3>
+                <p>Expert trainers with practical knowledge.</p>
+            </div>
+
+            <div class="feature-box glass-card">
+                <i class="fas fa-laptop"></i>
+                <h3>Practical Classes</h3>
+                <p>100% hands-on training with projects.</p>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <img src="logo.png" alt="PE COMPUTER CLASS">
+
+        <div class="about-text">
+            <h2 class="gradient-text">About PE COMPUTER CLASS</h2>
+            <p>PE COMPUTER CLASS is a leading institute providing quality computer education for students and job seekers.</p>
+            <a href="#" class="btn">Join Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 PE COMPUTER CLASS | All Rights Reserved</p>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
