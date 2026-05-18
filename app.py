@@ -58,9 +58,7 @@ def register():
     conn.commit()
     conn.close()
 
-    flash("Admission Submitted Successfully!")
-    return redirect('/')
-
+    return "success"
 
 # -----------------------
 # Admin Login
