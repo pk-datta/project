@@ -50,6 +50,14 @@
 <div class="hero-form glass-card">
     <h3 class="gradient-text">Quick Admission</h3>
 
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="success-message">
+          {{ messages[0] }}
+        </div>
+      {% endif %}
+    {% endwith %}
+
     <form action="https://pecomputerclass-74.onrender.com/register" method="POST">
         <input type="text" name="name" placeholder="Student Name" required>
 

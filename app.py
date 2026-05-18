@@ -1,6 +1,6 @@
-
-from flask import Flask, render_template, request, session, redirect
+from flask import Flask, render_template, request, session, redirect, flash
 import sqlite3
+import os
 
 app = Flask(__name__)
 app.secret_key = "mysecretkey123"
@@ -36,6 +36,8 @@ def home():
 
 
 # -----------------------
+# Register Form Submit
+# -----------------------
 @app.route('/register', methods=['POST'])
 def register():
 
@@ -56,7 +58,8 @@ def register():
     conn.commit()
     conn.close()
 
-    return redirect('/')"
+    flash("Admission Submitted Successfully!")
+    return redirect('/')
 
 
 # -----------------------
@@ -107,9 +110,6 @@ def admin():
 # -----------------------
 # Logout
 # -----------------------
-# -----------------------
-# Logout
-# -----------------------
 @app.route('/logout')
 def logout():
 
@@ -142,7 +142,5 @@ def delete_student(id):
 # -----------------------
 # Run App
 # -----------------------
-import os
-
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=False)
