@@ -36,8 +36,6 @@ def home():
 
 
 # -----------------------
-# Register Form Submit
-# -----------------------
 @app.route('/register', methods=['POST'])
 def register():
 
@@ -58,7 +56,7 @@ def register():
     conn.commit()
     conn.close()
 
-    return "SUCCESS"
+    return redirect('/')"
 
 
 # -----------------------
